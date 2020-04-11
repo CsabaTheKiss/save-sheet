@@ -1,3 +1,8 @@
+# About
+A pet project to learn more about Svelte.
+
+This one is an online version of Save sheet for Tainted Grail - Fall of Avalon board game.
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
