@@ -2,15 +2,18 @@
   import { onMount } from 'svelte';
   import axios from 'axios';
   import Select, { Option } from '@smui/select';
+  import NProgress from 'nprogress';
 
   let campaings = [];
   let selectedCampaingId;
   let isLoading = true;
 
   onMount(async () => {
+    NProgress.start();
     const response = await axios.get('/campaings.json');
     campaings = response.data;
     isLoading = false;
+    NProgress.done();
   });
 
 </script>

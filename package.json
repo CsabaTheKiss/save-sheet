@@ -21,5 +21,7 @@
     "svelte-material-ui": "^1.0.0-beta.20",
     "svelte-routing": "^1.4.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  }
 }
