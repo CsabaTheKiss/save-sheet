@@ -1,8 +1,11 @@
 <script>
   import Select, {Option} from '@smui/select';
+  import NewCampaing from './new-campaing/NewCampaing.svelte';
 
   let fruits = ['Apple', 'Orange', 'Banana', 'Mango'];
   let valueFilledEnhanced = '';
+
+
 </script>
 
 <main>
@@ -16,6 +19,7 @@
     </Select>
 
     <pre class="status">Selected: {valueFilledEnhanced}</pre>
+    <NewCampaing />
 </main>
 
 <style>
