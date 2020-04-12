@@ -1,10 +1,9 @@
 <script>
   import { onMount } from 'svelte';
-  import List, {Item, Text} from '@smui/list';
-  import Checkbox from '@smui/checkbox';
-  import FormField from '@smui/form-field';
+  import List from '@smui/list';
   import axios from 'axios';
   import NProgress from 'nprogress';
+  import StatusListItem from './StatusListItem.svelte';
 
   export let capmaignId = 0;
 
@@ -27,15 +26,7 @@
   {:else}
     <List nonInteractive>
       {#each campaignStatuses as status}
-        <Item>
-          <Text>{status.name}</Text>
-          {#each Array(status.parts) as _, i}
-            <FormField align="end">
-              <Checkbox />
-              <span slot="label">{ i + 1 }</span>
-            </FormField>
-          {/each}
-        </Item>
+        <StatusListItem statusItem={status}></StatusListItem>
       {/each}
     </List>
   {/if}
