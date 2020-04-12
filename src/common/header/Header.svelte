@@ -19,8 +19,8 @@
           <Link to="/">{pageTitle}</Link>
         </Title>
         <span class="header-nav-button">
-          <Button on:click={() => navigate('/new-campaing')}>
-            <Label>Start New Campaing</Label>
+          <Button on:click={() => navigate('/new-campaign')}>
+            <Label>Start New Campaign</Label>
           </Button>
         </span>
       </Section>
