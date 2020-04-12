@@ -14,7 +14,7 @@
       <NewCampaing />
     </Route>
     <Route path="/">
-      <p>Welcome to Save Sheet! Start a new campaign, or login to load an existing one.</p>
+      <p class="mdc-typography--body1">Welcome to Save Sheet! Start a new campaign, or login to load an existing one.</p>
     </Route>
   </div>
 </Router>
