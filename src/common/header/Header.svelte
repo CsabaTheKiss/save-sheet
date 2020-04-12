@@ -8,6 +8,9 @@
 </script>
 
 <div class="top-app-bar-container">
+  <div class="header-decor">
+    <img src="/header.png" alt="header-logo" />
+  </div>
   <TopAppBar variant="static">
     <Row>
       <Section>
@@ -33,5 +36,20 @@
 <style>
 	.header-nav-button {
 		margin-left: 1em;
+  }
+
+  .header-decor {
+    background: black;
+  }
+
+  .header-decor img {
+    width: 200px;
+    height: auto;
+  }
+  
+  @media (max-width: 640px) {
+		.header-decor {
+			display: none;
+		}
 	}
 </style>

@@ -12,6 +12,7 @@
     NProgress.start();
     const response = await axios.get('/campaings.json');
     campaings = response.data;
+    selectedCampaingId = campaings[0].id;
     isLoading = false;
     NProgress.done();
   });
@@ -19,11 +20,11 @@
 </script>
 
 <div>
+  <p class="mdc-typography--body1">Please select a campaing to start a new game.</p>
   {#if isLoading}
     Loading...
   {:else}
     <Select variant="filled" enhanced bind:value={selectedCampaingId} label="Campaing">
-      <Option value=""></Option>
       {#each campaings as campaing}
         <Option value={campaing.id} selected={selectedCampaingId === campaing.id}>{ campaing.title }</Option>
       {/each}
