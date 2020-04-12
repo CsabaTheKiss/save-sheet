@@ -1,5 +1,4 @@
 <script>
-  import Button, { Label } from '@smui/button';
   import { Route, Router, navigate } from 'svelte-routing';
 
   import Header from './common/header/Header.svelte';
@@ -9,31 +8,20 @@
 </script>
 
 <Router { url }>
-  <Header></Header>
-  <Route path="/new-campaing">
-    <NewCampaing />
-  </Route>
-  <Route path="/">
-    <p>Welcome to Save Sheet! Start a new campaign, or login to load an existing one.</p>
-    <Button color="secondary" on:click={() => navigate('/new-campaing')} variant="unelevated">
-      <Label>Start New Campaing</Label>
-    </Button>
-  </Route>
+  <Header pageTitle="Save sheet"></Header>
+  <div class="main">
+    <Route path="/new-campaing">
+      <NewCampaing />
+    </Route>
+    <Route path="/">
+      <p>Welcome to Save Sheet! Start a new campaign, or login to load an existing one.</p>
+    </Route>
+  </div>
 </Router>
 
 <style>
-	main {
-		text-align: center;
+	.main {
 		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {
