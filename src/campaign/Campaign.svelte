@@ -20,10 +20,20 @@
     NProgress.done();
   });
 
-  function updateStatus(changeObject) {
-    console.warn('status changed: ', changeObject);
+  async function updateStatus(changeObject) {
+    const {
+      statusId, partNumber, checked
+    } = changeObject.detail;
+    // console.warn(changeObject);
     // TODO: Save status changes here
     // use PUT request to create new intro with pre-defined key for Firebase
+    const response = await axios.put(`/saved-games/statuses.json`, {
+      [userId]: {
+        statusId,
+        partNumber,
+        value: checked
+      }
+    });
   }
 
 </script>
