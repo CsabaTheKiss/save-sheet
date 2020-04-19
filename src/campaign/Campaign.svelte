@@ -7,6 +7,8 @@
 
   export let capmaignId = 0;
 
+  const userId = 'aaa';
+
   let campaignStatuses = [];
   let isLoading = true;
 
@@ -18,6 +20,12 @@
     NProgress.done();
   });
 
+  function updateStatus(changeObject) {
+    console.warn('status changed: ', changeObject);
+    // TODO: Save status changes here
+    // use PUT request to create new intro with pre-defined key for Firebase
+  }
+
 </script>
 
 <div>
@@ -26,7 +34,7 @@
   {:else}
     <List nonInteractive>
       {#each campaignStatuses as status}
-        <StatusListItem statusItem={status}></StatusListItem>
+        <StatusListItem statusItem={status} on:statusChange={updateStatus}></StatusListItem>
       {/each}
     </List>
   {/if}
